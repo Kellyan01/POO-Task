@@ -43,8 +43,7 @@ class AccountController extends AbstractController {
 
     public function render():void{
         $this->renderHeader();
-        echo $this->displayForm();
-        echo $this->displayAccount();
+        echo $this->getListViews()['accueil']->setForm($this->displayForm())->setListUsers($this->displayAccount())->displayView();
         $this->renderFooter();
     }
 }

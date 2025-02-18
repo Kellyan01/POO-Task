@@ -11,5 +11,5 @@ include './view/viewAccount.php';
 include './view/viewFooter.php';
 include './controller/accountController.php';
 
-$home = new AccountController(null,['header'=>new ViewHeader(),'footer'=> new ViewFooter()]);
+$home = new AccountController(null,['header'=>new ViewHeader(),'footer'=> new ViewFooter(), 'accueil' => new ViewAccount()]);
 $home->render();
