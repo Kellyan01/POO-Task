@@ -30,7 +30,7 @@ abstract class AbstractController {
 
     public function renderHeader():void{
         if(isset($_SESSION['id'])){
-            $this->getListViews()['header']->setNav('<a href="/moncompte">Mon Compte</a>
+            $this->getListViews()['header']->setNav('<a href="/categories">Categories</a><a href="/moncompte">Mon Compte</a>
                  <a href="/deconnexion">Se Déconnecter</a>');
          }
         echo $this->getListViews()['header']->displayView();
